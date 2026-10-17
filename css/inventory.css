@@ -1,0 +1,101 @@
+main {
+  display: flex;
+  flex-direction: column;
+  max-width: 80%;
+}
+
+.character-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 5px;
+}
+
+div h2 {
+  color: #f1d18a;
+}
+
+section h2 {
+  color: #f1d18a;
+}
+
+#money {
+  padding: 10px;
+  background-color: #283c59;
+  border-radius: 5px;
+  color: #f1d18a;
+}
+
+.bag-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(70px, 1fr));
+  gap: 12px;
+  border-radius: 5px;
+}
+
+.bag-grid div {
+  display: flex;
+  border: 1px solid #34465e;
+  justify-content: center;
+  align-items: center;
+  aspect-ratio: 1/1;
+  background-color: #1d2c43;
+  border-radius: 5px;
+  padding: 10px;
+  overflow: hidden;
+}
+
+@media (max-width: 600px) {
+  .bag-grid {
+    grid-template-columns: repeat(4, minmax(50px, 1fr));
+  }
+
+  main {
+    width: 90%;
+    margin: 0 auto;
+    gap: 8px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  nav {
+    flex-wrap: wrap;
+  }
+}
+
+.bag-grid div:hover {
+  background-color: #344968;
+}
+
+.item-info {
+  padding: 10px;
+  background-color: #1d2c43;
+  border-radius: 5px;
+}
+
+.btns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.btns button {
+  flex: 1;
+  padding: 15px;
+  border-radius: 5px;
+  border: none;
+  font-size: 16px;
+  color: white;
+}
+
+#trang-bi {
+  background-color: #b79553;
+}
+
+#sap-xep {
+  background-color: #344968;
+}
+
+.btns button:focus {
+  background-color: #d65757;
+}

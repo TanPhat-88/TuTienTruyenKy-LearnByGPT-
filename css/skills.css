@@ -1,0 +1,104 @@
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+h2 {
+  color: #f1d18a;
+}
+
+#stats {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+#stats div {
+  padding: 10px;
+  flex: 1;
+  background-color: #283c59;
+  border-radius: 5px;
+  text-align: center;
+}
+
+#skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(200px, 1fr));
+  gap: 12px;
+}
+
+#skills-grid div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #283c59;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.attack {
+  border: 1px solid #d8b86b;
+}
+
+.defend {
+  border: 1px solid #61aeee;
+}
+
+.lock {
+  opacity: 0.4;
+}
+
+#skills-grid div:hover {
+  background-color: #344968;
+}
+
+#skill-info {
+  padding: 10px;
+  background-color: #1d2c43;
+  border-radius: 5px;
+}
+
+#skill-method {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+#skill-method button {
+  flex: 1;
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  color: black;
+  font-weight: 400;
+}
+
+#skill-info p strong,
+#skill-info p em,
+em {
+  color: red;
+}
+
+#upgrade {
+  background-color: #d8b86b;
+}
+
+#upgrade:hover {
+  background-color: #8b7645;
+}
+
+#unlock {
+  background-color: #61aeee;
+}
+
+#unlock:hover {
+  background-color: #4074a0;
+}
+
+@media (max-width: 600px) {
+  #skills-grid {
+    grid-template-columns: repeat(2, minmax(100px, 1fr));
+  }
+}

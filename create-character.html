@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Đăng Ký Nhân Vật - Tu Tiên Truyền Kỳ</title>
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/create-character.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Tu Tiên Truyền Kỳ</h1>
+      <p>Khởi đầu tiên lộ, đạo vấn trường sinh</p>
+    </header>
+
+    <nav>
+      <a href="#register-form" id="main">Form Đăng Ký</a>
+      <a href="./character.html">Về Hồ Sơ</a>
+    </nav>
+
+    <main>
+      <form action="./create-character" method="post" id="register-form">
+        <h2>ĐĂNG KÍ CÔNG DÂN - CSDL TIÊN GIỚI</h2>
+        <label>
+          Tên nhân vật:
+          <input
+            type="text"
+            id="character-name"
+            name="name"
+            required
+            minlength="3"
+            maxlength="20"
+          />
+        </label>
+        <label>
+          Tuổi nhân vật:
+          <input
+            type="number"
+            id="character-age"
+            name="age"
+            min="1"
+            max="999"
+            required
+          />
+        </label>
+
+        <label>
+          Linh Căn:
+          <select name="linh-can" id="linh-can-nv" required>
+            <option value="" selected>--- Hãy chọn một linh căn ---</option>
+            <option value="hoa">Hỏa Linh Căn</option>
+            <option value="kim">Kim Linh Căn</option>
+            <option value="moc">Mộc Linh Căn</option>
+            <option value="thuy">Thủy Linh Căn</option>
+            <option value="tho">Thổ Linh Căn</option>
+          </select>
+        </label>
+        <label>
+          Môn phái
+          <select name="tong-mon" id="tong-mon-nv" required>
+            <option value="none" selected>Không Có</option>
+            <option value="thien-cung">Thiên Cung</option>
+            <option value="thien-huyen-tong">Thiên Huyền Tông</option>
+            <option value="hop-hoan-tong">Hợp Hoan Tông</option>
+            <option value="ma-tong">Ma Tông</option>
+            <option value="hop-linh-tong">Hợp Linh Tông</option>
+          </select>
+        </label>
+        <fieldset>
+          <legend>Giới tính</legend>
+          <label>
+            <input
+              type="radio"
+              id="character-male"
+              name="gender"
+              required
+              value="male"
+            />
+            Nam
+          </label>
+          <label>
+            <input
+              type="radio"
+              id="character-female"
+              name="gender"
+              required
+              value="female"
+            />
+            Nữ
+          </label>
+        </fieldset>
+        <fieldset>
+          <legend>Thiên phú:</legend>
+          <label
+            ><input type="checkbox" name="thien-phu" value="copy" />Sao Chép
+          </label>
+          <label
+            ><input type="checkbox" name="thien-phu" value="over-see" />Thấu Thị
+          </label>
+          <label
+            ><input type="checkbox" name="thien-phu" value="than-the" />Thần Thể
+          </label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Tiểu sử</legend>
+          <textarea
+            rows="4"
+            style="width: 100%; border: none; outline: none; resize: vertical"
+            placeholder="Nhập nội dung tại đây..."
+            name="bi-o"
+          ></textarea>
+        </fieldset>
+        <section id="tool-btns">
+          <button type="submit">Đăng Kí</button>
+          <button type="reset">Nhập lại</button>
+        </section>
+      </form>
+    </main>
+
+    <footer>©Tu Tiên Truyền Kỳ 2026</footer>
+  </body>
+</html>
